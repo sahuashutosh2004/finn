@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light dark;
+
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --muted: #6b6b70;
+  --divider: #e6e6ea;
+  --fill: #f2f2f5;
+  --accent: #0a66ff;
+  --up: #12823b;
+  --down: #d1271f;
+  --sheet: #ffffff;
+  --shimmer: #fafafc;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --fg: #f5f5f7;
+    --muted: #a1a1a8;
+    --divider: #26262a;
+    --fill: #1c1c1f;
+    --accent: #3d8bff;
+    --up: #2fbf5b;
+    --down: #ff5147;
+    --sheet: #161618;
+    --shimmer: #2a2a2e;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-divider: var(--divider);
+  --color-fill: var(--fill);
+  --color-accent: var(--accent);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-sheet: var(--sheet);
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum", "cv11";
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Shimmer skeletons: a soft highlight sweeping across the fill colour. */
+.shimmer {
+  background: linear-gradient(90deg, var(--fill) 0%, var(--fill) 35%, var(--shimmer) 50%, var(--fill) 65%, var(--fill) 100%);
+  background-size: 300% 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer {
+    animation: none;
+  }
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}

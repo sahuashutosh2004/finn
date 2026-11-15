@@ -1,0 +1,40 @@
+name: Refresh data
+
+on:
+  schedule:
+    - cron: "0 11 * * 1-5" # 16:30 IST, weekdays, after the NSE close
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run refresh
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      - name: Commit the new snapshot
+        run: |
+          git config user.name "finn-refresh[bot]"
+          git config user.email "finn-refresh@users.noreply.github.com"
+          git add data/snapshot.json data/cache/llm
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "data: refresh $(TZ=Asia/Kolkata date +'%Y-%m-%d %H:%M IST')"
+            git push
+          fi
