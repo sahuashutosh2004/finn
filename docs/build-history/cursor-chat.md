@@ -1,5 +1,5 @@
 # FINN: build chat
-_Converted from the Cursor agent transcript on 16/11/2026. Your messages and Cursor's text replies, in order; tool calls are left out._
+_Converted from the Cursor agent transcript on 16/11/2026. My messages and Cursor's text replies, in order; tool calls are left out._
 
 ---
 
