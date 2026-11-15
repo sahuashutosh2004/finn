@@ -1,5 +1,5 @@
 **To:** assessment@enam.com
-**Subject:** IIT Delhi - AI Engineer-2027
+**Subject:** IIT Delhi – AI Engineer - 2027
 
 Dear ENAM team,
 
@@ -29,12 +29,12 @@ Please find my submission for the AI Engineer Build Challenge: FINN, a mobile-fi
 - Track each guidance item across several calls, so the track record covers more than the latest transcript.
 - Intraday prices during market hours.
 
-**Live:** [link-live]
+**Live:** https://finn-two-ashen.vercel.app
 **GitHub:** https://github.com/sahuashutosh2004/finn
-**Build History:** [build-history-link]
+**Build History:** https://github.com/sahuashutosh2004/finn/blob/main/docs/build-history/cursor-chat.md
 
 Thank you for your time.
 
 Regards,
-[Your name]
+Ashutosh Sahu
 IIT Delhi
