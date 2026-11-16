@@ -23,8 +23,8 @@ export default function AppHeader({ alertInput }: { alertInput: AlertInput | nul
   return (
     <header className="sticky top-0 z-30 -mx-4 border-b border-divider bg-bg/90 px-4 pt-[env(safe-area-inset-top)] backdrop-blur-xl">
       <div className="flex h-12 items-center justify-between">
-        <Link href="/" className="text-[20px] font-bold tracking-[-0.03em]">
-          FINN
+        <Link href="/" className="text-[17px] font-bold tracking-[-0.03em]">
+          Dreamstockifier
         </Link>
         <Link
           href="/company?focus=1"

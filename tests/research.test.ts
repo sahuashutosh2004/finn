@@ -119,7 +119,7 @@ test("bull vs bear: each point has a receipt and at most 3 per side", () => {
     "Sales compounded 27% a year over 5 years.",
   ]);
   assert.deepEqual(bear.map((p) => p.text), ["Operating margin 14% in Sep 2026 vs 16% a year earlier."]);
-  for (const p of [...bull, ...bear]) assert.ok(p.receipts.length > 0 && p.receipts.every((r) => r.source === "Screener" || r.source === "FINN calculation"));
+  for (const p of [...bull, ...bear]) assert.ok(p.receipts.length > 0 && p.receipts.every((r) => r.source === "Screener" || r.source === "Dreamstockifier calculation"));
 
   const bank = bullBear(hdfc);
   assert.deepEqual(bank.bull.map((p) => p.text), ["Revenue compounded 22% a year over 5 years."]);

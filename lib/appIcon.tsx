@@ -2,10 +2,9 @@ import { ImageResponse } from "next/og";
 
 const BLUE = "#0a66ff";
 
-// A white "F" built from bars, kept inside the central 80% safe zone for maskable icons.
+// A white "D" built from a stem and an arc, kept inside the central 80% safe zone for maskable icons.
 export function renderAppIcon(size: number) {
   const u = size / 100;
-  const bar = { position: "absolute" as const, background: "#ffffff", borderRadius: 2 * u };
 
   return new ImageResponse(
     (
@@ -18,9 +17,31 @@ export function renderAppIcon(size: number) {
           background: BLUE,
         }}
       >
-        <div style={{ ...bar, left: 35 * u, top: 26 * u, width: 12 * u, height: 48 * u }} />
-        <div style={{ ...bar, left: 35 * u, top: 26 * u, width: 32 * u, height: 12 * u }} />
-        <div style={{ ...bar, left: 35 * u, top: 45 * u, width: 25 * u, height: 11 * u }} />
+        <div
+          style={{
+            position: "absolute",
+            left: 32 * u,
+            top: 24 * u,
+            width: 12 * u,
+            height: 52 * u,
+            background: "#ffffff",
+            borderRadius: 2 * u,
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            left: 38 * u,
+            top: 24 * u,
+            width: 30 * u,
+            height: 52 * u,
+            borderTop: `${12 * u}px solid #ffffff`,
+            borderRight: `${12 * u}px solid #ffffff`,
+            borderBottom: `${12 * u}px solid #ffffff`,
+            borderLeft: "0 solid transparent",
+            borderRadius: `0 ${26 * u}px ${26 * u}px 0`,
+          }}
+        />
       </div>
     ),
     { width: size, height: size },

@@ -239,7 +239,7 @@ export function scopeIssue(metric: GuidanceMetric, quote: string): string | null
   if (!NAMES[metric].test(quote)) {
     return metric === "ebitda_margin"
       ? "The quote doesn't say EBITDA, and Screener's margin is EBITDA, so the two may not be comparable."
-      : `The quote doesn't name the company's ${metric === "pat_growth" ? "profit" : "revenue"}, so FINN doesn't compare it with Screener's table.`;
+      : `The quote doesn't name the company's ${metric === "pat_growth" ? "profit" : "revenue"}, so Dreamstockifier doesn't compare it with Screener's table.`;
   }
   if (CURRENCY.test(quote)) return "Guided in constant currency or dollars; Screener reports rupee figures.";
   const part = quote.match(PART);

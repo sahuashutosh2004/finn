@@ -14,12 +14,12 @@ const inter = Inter({
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "FINN",
+  title: "Dreamstockifier",
   description: "What changed in your portfolio today, and why it matters.",
-  applicationName: "FINN",
+  applicationName: "Dreamstockifier",
   appleWebApp: {
     capable: true,
-    title: "FINN",
+    title: "Dreamstockifier",
     statusBarStyle: "default",
   },
   formatDetection: { telephone: false },

@@ -6,7 +6,7 @@ import { chartUrl, type StockData } from "./market";
 import type { Change, ResultsView } from "./results";
 import type { FinTable, ScreenerData } from "./screener";
 
-export type Source = "Yahoo Finance" | "Screener" | "BSE" | "Filing PDF" | "Transcript PDF" | "FINN calculation";
+export type Source = "Yahoo Finance" | "Screener" | "BSE" | "Filing PDF" | "Transcript PDF" | "Dreamstockifier calculation";
 
 export type Receipt = {
   label: string;
@@ -72,8 +72,8 @@ export function calcReceipt(label: string, value: string, formula: string, input
     label,
     value,
     raw: null,
-    source: "FINN calculation",
-    where: "Calculated by FINN from the inputs below",
+    source: "Dreamstockifier calculation",
+    where: "Calculated by Dreamstockifier from the inputs below",
     url: null,
     fetchedAt: inputs.find((i) => i?.fetchedAt)?.fetchedAt ?? null,
     formula,

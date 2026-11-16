@@ -34,7 +34,7 @@ export default function PromisedDelivered({ g }: { g: GuidanceResult }) {
   if (g.status === "no-key") {
     return (
       <p className="py-3 text-[13px] leading-5 text-muted">
-        The latest transcript is here (<TranscriptLink url={g.transcriptUrl} period={g.period} />) but no model key is set, so FINN didn&apos;t read the guidance out of it. Add{" "}
+        The latest transcript is here (<TranscriptLink url={g.transcriptUrl} period={g.period} />) but no model key is set, so Dreamstockifier didn&apos;t read the guidance out of it. Add{" "}
         <code className="rounded bg-fill px-1 text-[12px]">GEMINI_API_KEY</code> or <code className="rounded bg-fill px-1 text-[12px]">GROQ_API_KEY</code> to{" "}
         <code className="rounded bg-fill px-1 text-[12px]">.env.local</code>. Bull vs bear below uses only the tables.
       </p>
@@ -44,8 +44,8 @@ export default function PromisedDelivered({ g }: { g: GuidanceResult }) {
     return (
       <p className="py-3 text-[13px] leading-5 text-muted">
         {g.reason === "limit"
-          ? "The model's free-tier limit is used up for now, so FINN didn't read the "
-          : "FINN is still reading the "}
+          ? "The model's free-tier limit is used up for now, so Dreamstockifier didn't read the "
+          : "Dreamstockifier is still reading the "}
         <TranscriptLink url={g.transcriptUrl} period={g.period} />
         {g.reason === "limit" ? ". It will be read on the next refresh." : ". Reload in a minute to see what management promised."} Bull vs bear below uses only the tables.
       </p>

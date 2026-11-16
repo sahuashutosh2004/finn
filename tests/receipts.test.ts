@@ -54,7 +54,7 @@ test("resultsReceipts: the cell, and the QoQ/YoY arithmetic with its inputs", ()
 
 test("calcReceipt keeps the formula and drops missing inputs", () => {
   const r = calcReceipt("Debt to equity", "0.02x", "a ÷ b", [null]);
-  assert.deepEqual([r.source, r.formula, r.inputs], ["FINN calculation", "a ÷ b", []]);
+  assert.deepEqual([r.source, r.formula, r.inputs], ["Dreamstockifier calculation", "a ÷ b", []]);
 });
 
 test("priceReceipts: Yahoo close with the Screener cross-check and the day-change formula", () => {

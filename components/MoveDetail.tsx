@@ -40,7 +40,7 @@ export default function MoveDetail({ stock: s, id }: { stock: BriefStock; id: st
           <Num r={s.receipts.volumeRatio}>{formatRatio(s.volumeRatio)}</Num>
         </Line>
       </div>
-      <p className="mt-3 text-[13px] leading-5 text-muted">FINN doesn&apos;t explain a move without a filing behind it. Open the stock&apos;s page for its filings and results.</p>
+      <p className="mt-3 text-[13px] leading-5 text-muted">Dreamstockifier doesn&apos;t explain a move without a filing behind it. Open the stock&apos;s page for its filings and results.</p>
       <div className="mt-5 grid grid-cols-2 gap-2">
         <button
           type="button"

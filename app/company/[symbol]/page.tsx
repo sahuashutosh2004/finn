@@ -38,7 +38,7 @@ async function readSymbol(params: Props["params"]) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  return { title: `${await readSymbol(params)} · FINN` };
+  return { title: `${await readSymbol(params)} · Dreamstockifier` };
 }
 
 const fmtDay = (iso: string) => new Date(iso).toLocaleDateString("en-IN", { timeZone: "Asia/Kolkata", dateStyle: "medium" });
@@ -87,7 +87,7 @@ async function Research({ symbol }: { symbol: string }) {
   if ("error" in got) {
     return (
       <Section title="Research">
-        <EmptyState title={`Couldn't load Screener for ${symbol}`} description={`${got.error}. FINN shows nothing here rather than a guess.`} />
+        <EmptyState title={`Couldn't load Screener for ${symbol}`} description={`${got.error}. Dreamstockifier shows nothing here rather than a guess.`} />
       </Section>
     );
   }

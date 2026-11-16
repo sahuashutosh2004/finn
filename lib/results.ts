@@ -9,7 +9,7 @@ export type Change =
   | { kind: "nm" }; // not meaningful: base is zero or negative
 
 export type MetricLine = {
-  label: string; // what FINN calls it
+  label: string; // what Dreamstockifier calls it
   source: string; // Screener's row name
   note?: string;
   percent: boolean;
@@ -72,7 +72,7 @@ const STANDARD: { label: string; source: string; note?: string }[] = [
   { label: "PAT", source: "Net Profit" },
 ];
 
-// Derived helper rows Screener adds; FINN computes YoY itself.
+// Derived helper rows Screener adds; Dreamstockifier computes YoY itself.
 const SKIP = /^YoY .* growth$/i;
 
 export function buildResults(q: Quarters, source: { url: string; fetchedAt: string } | null = null): ResultsView {

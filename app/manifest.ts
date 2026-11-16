@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "FINN",
-    short_name: "FINN",
+    name: "Dreamstockifier",
+    short_name: "Dreamstockifier",
     description: "What changed in your portfolio today, and why it matters.",
     start_url: "/",
     scope: "/",

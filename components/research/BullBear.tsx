@@ -6,7 +6,7 @@ function Column({ title, tone, points }: { title: string; tone: "up" | "down"; p
     <div className="py-3">
       <p className={`text-[13px] font-semibold uppercase tracking-[0.04em] ${tone === "up" ? "text-up" : "text-down"}`}>{title}</p>
       {points.length === 0 ? (
-        <p className="mt-1 text-[13px] text-muted">Nothing in the tables clears FINN&apos;s bar for a {tone === "up" ? "bull" : "bear"} point.</p>
+        <p className="mt-1 text-[13px] text-muted">Nothing in the tables clears Dreamstockifier&apos;s bar for a {tone === "up" ? "bull" : "bear"} point.</p>
       ) : (
         <ol className="mt-1 space-y-2">
           {points.map((p, i) => (

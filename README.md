@@ -1,8 +1,8 @@
-# FINN
+# Dreamstockifier
 
 A mobile-first app for an Indian equity investor with an 18-stock NSE portfolio. Built for the ENAM AI Engineer Build Challenge.
 
-**The idea: filter, don't aggregate.** An investor doesn't need another feed of every exchange filing. FINN reads everything, ranks it with transparent rules, and shows the few items worth attention: a results filing, a management change, a stock that moved 3% on double its usual volume. Everything else is folded away. Every number on screen can be tapped to see exactly where it came from.
+**The idea: filter, don't aggregate.** An investor doesn't need another feed of every exchange filing. Dreamstockifier reads everything, ranks it with transparent rules, and shows the few items worth attention: a results filing, a management change, a stock that moved 3% on double its usual volume. Everything else is folded away. Every number on screen can be tapped to see exactly where it came from.
 
 | Brief | Alerts | Filing sheet | Receipt | Company |
 | --- | --- | --- | --- | --- |
@@ -52,14 +52,14 @@ A GitHub Action (`.github/workflows/refresh.yml`) runs the refresh at 4:30 pm IS
 
 ## Data sources
 
-| Source | What FINN takes | Notes |
+| Source | What Dreamstockifier takes | Notes |
 | --- | --- | --- |
 | Yahoo Finance chart API | Daily close, day change, volume, 52-week range | Cross-checked against Screener's current price on every refresh; anything more than 1% apart is flagged on screen. |
 | Screener.in company page | Quarterly results, annual P&L, balance sheet, cash flow, ratios, compounded growth, market cap, P/E, ROE, ROCE, BSE code, transcript links, latest 5 announcements | Same parser for the snapshot and for live lookups. |
 | BSE announcements API | Full 30-day filing list per company | Sent with a browser user agent and a BSE referer. Falls back to Screener's 5 if BSE fails, and says so. |
 | Company PDFs | Filing text and earnings-call transcripts | Read with `unpdf`. Only PDFs with a text layer can be read. |
 
-FINN doesn't scrape NSE's website, which blocks bots and changes often. BSE carries the same filings for these companies.
+Dreamstockifier doesn't scrape NSE's website, which blocks bots and changes often. BSE carries the same filings for these companies.
 
 ## How ranking works
 
